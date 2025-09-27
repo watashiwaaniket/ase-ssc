@@ -8,7 +8,7 @@ export default function Navbar() {
     const [viewSearchBar, setViewSearchBar] = useState(false);
 
     return(
-        <section className="flex flex-col items-center top-0 left-0 absolute z-50 bg-neutral-50">
+        <section className="flex flex-col items-center top-0 left-0 absolute sticky z-50 bg-neutral-50">
             <div className="w-screen bg-black text-neutral-300 text-center p-2 text-[10px] sm:text-base">
                 Catch our latest drop! <span className="text-neutral-50">Exclusive till 10th Oct 2025</span>
             </div>

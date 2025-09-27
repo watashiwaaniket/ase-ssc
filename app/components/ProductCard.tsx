@@ -9,7 +9,7 @@ export interface ProductCardProps{
 export default function ProductCard({name, price, imageUrl} : ProductCardProps) {
     return(
         <div
-            className="border border-dashed border-neutral-400 min-h-96 rounded-xl bg-neutral-100"
+            className="border border-neutral-300 h-[420px] rounded-xl bg-neutral-100"
         >
             <Image 
                 src={imageUrl} 
@@ -18,7 +18,7 @@ export default function ProductCard({name, price, imageUrl} : ProductCardProps) 
                 alt="anc"
                 className="rounded-2xl m-2 border border-neutral-300" 
             />
-            <div className="flex justify-between items-center px-4">
+            <div className="flex w-[318px] justify-between items-center px-4 pb-2">
                 <div>
                     <p className="font-semibold text-lg">{name}</p>
                     <p>₹{price}</p>

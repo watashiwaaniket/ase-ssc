@@ -4,10 +4,10 @@ import { Button } from "../Button";
 export default function Hero() {
     return(
         <section 
-            className="mt-[94px] sm:mt-[105px] h-[480px] sm:h-[780px] overflow-clip sm:bg-[url(/banner.jpg)] bg-black flex justify-center w-screen relative z-10" 
+            className="h-[480px] sm:h-[780px] overflow-clip sm:bg-[url(/banner.jpg)] bg-[url(/mobile-banner.jpg)] flex justify-center w-screen relative z-10" 
             style={{backgroundSize: "cover", backgroundPosition: "center"}}
         >
-            <div className="w-96 px-4 md:px-6 sm:w-[620px] md:w-[860px] lg:w-[1200px] text-white absolute bottom-0 h-96">
+            <div className="w-96 px-4 md:px-6 sm:w-[620px] md:w-[860px] lg:w-[1200px] text-white absolute pt-12 sm:pt-0 sm:bottom-0 h-96">
                 <div className="flex flex-col gap-1.5">
                     <h1 className="text-4xl md:text-7xl tracking-tight font-bold flex items-center">
                         <Image src={"/vercel.svg"} alt="icon" width={64} height={64} className="rotate-180 size-8 md:size-[64px]"/>
