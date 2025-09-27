@@ -13,7 +13,7 @@ export default function Footer() {
                 <Link href={'/'}><img src="/youtube.svg" alt="yt" className="size-8"/></Link> .
             </div>
             <div className="flex items-center gap-2">
-                <p>&copy; 2025</p> <img src="/vercel.svg" alt="sorta" className="bg-black rotate-180 size-6"/>
+                <img src="/vercel.svg" alt="sorta" className="bg-black rotate-180 size-4"/> <p>&copy; 2025</p>
             </div>
         </section>
     )

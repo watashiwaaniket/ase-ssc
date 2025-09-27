@@ -1,12 +1,7 @@
 import axios from "axios";
 import ProductCard from "../ProductCard";
+import { ProductSchema } from "@/app/utils/interfaces";
 
-export interface ProductSchema{
-  id : string;
-  name : string;
-  price : string;
-  imageUrl : string
-}
 
 async function fetchProducts() : Promise<ProductSchema[]> {
   const response = await axios.get<ProductSchema[]>("http://localhost:3000/products")

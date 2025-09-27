@@ -1,5 +1,7 @@
-export async function GET(){
-    return Response.json([
+import { CartItem, ProductSchema } from "@/app/utils/interfaces";
+import { error } from "console";
+
+const product : ProductSchema[] = [
         {
             id : "1",
             name : "ANC Wireless Earbuds",
@@ -46,5 +48,58 @@ export async function GET(){
             price : "72000",
             imageUrl : "/alpinestarHelmet.webp"
         },
-    ])
+]
+
+export async function GET() {
+    return Response.json(product)
+}
+
+export async function POST(
+    req : Request
+){
+    try{
+        const cart : CartItem[] = await req.json();
+
+        if (cart.length == 0){
+            return Response.json(
+                { message: "Cart is empty" },
+                { status: 400 }
+            )
+        }
+
+        for (const item of cart){
+            if(!item.id || !item.quantity){
+                return Response.json(
+                    { error : "Invalid request" },
+                    { status: 400 }
+                )
+            }
+        }
+
+        const result = cart.map( (item) => {
+            const products = product.find( (p) => p.id === item.id );
+            if (!products){
+                console.log(`CART_LOG : Items with ID ${item.id}, does not exist`)
+                return {
+                    name: null,
+                    quantity: 0,
+                }
+            }
+            return {
+                name: products.name,
+                quantity: item.quantity
+            }
+        })
+
+        return Response.json(
+            { message: "Order Successful!", order: result },
+            { status: 201 }
+        )
+    } catch(error){
+        return Response.json(
+            { error: 'Invalid Request' },
+            { status: 400 }
+        )
+    }
+    
 }
