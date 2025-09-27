@@ -22,7 +22,7 @@ export default async function Products() {
                 FLASH SALE * 10TH OCT * FLASH SALE * 10TH OCT * FLASH SALE * 10TH OCT * FLASH SALE * 10TH OCT * FLASH SALE * 10TH OCT * FLASH SALE * 10TH OCT * FLASH SALE * 10TH OCT * FLASH SALE * 10TH OCT * FLASH SALE * 10TH OCT *
             </div>
             <div className="w-96 p-4 md:p-6 sm:w-[620px] md:w-[860px] lg:w-[1200px] bg-neutral-50 rounded-xl mt-6">
-                <div className="flex flex-wrap items-center justify-center gap-4 md:gap-x-12 md:gap-y-8 pt-8">
+                <div className="flex flex-wrap items-center justify-center gap-4 md:gap-x-12 md:gap-y-8 py-8">
                     {products.map((product, index) => (
                         <ProductCard
                             key={index}

@@ -45,11 +45,6 @@ export async function GET(){
             name : "Motosport Carbon Fiber Helmet",
             price : "72000",
             imageUrl : ""
-        },{
-            id : "10",
-            name : "Motosport Carbon Fiber Biker Shoes",
-            price : "81000",
-            imageUrl : ""
         },
     ])
 }
