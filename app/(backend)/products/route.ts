@@ -3,48 +3,48 @@ export async function GET(){
         {
             id : "1",
             name : "ANC Wireless Earbuds",
-            price : "1999",
+            price : "5999",
             imageUrl : "https://littlewish.in/wp-content/uploads/2025/05/Black-Buds-3.png"
         },{
             id : "2",
             name : "Aqua EDP (20ml)",
-            price : "799",
-            imageUrl : ""
+            price : "1799",
+            imageUrl : "/perfume.webp"
         },{
             id : "3",
             name : "Headphones ANC",
-            price : "4200",
-            imageUrl : ""
+            price : "28000",
+            imageUrl : "/WH1000XM5S.webp"
         },{
             id : "4",
             name : "Aroma Essential Oil Diffuser",
             price : "2100",
-            imageUrl : ""
+            imageUrl : "/oilDiffuser.jpg"
         },{
             id : "5",
             name : "Table Lamp",
             price : "1399",
-            imageUrl : ""
+            imageUrl : "/tableLamp.jpg"
         },{
             id : "6",
             name : "Organic Cotton Tshirt",
             price : "699",
-            imageUrl : ""
+            imageUrl : "/whiteT.jpg"
         },{
             id : "7",
-            name : "Cheenos",
+            name : "Chinos",
             price : "2300",
-            imageUrl : ""
+            imageUrl : "/chinos.webp"
         },{
             id : "8",
             name : "Biker Glove",
-            price : "4100",
-            imageUrl : ""
+            price : "2400",
+            imageUrl : "/alpinestarGloves.webp"
         },{
             id : "9",
             name : "Motosport Carbon Fiber Helmet",
             price : "72000",
-            imageUrl : ""
+            imageUrl : "/alpinestarHelmet.webp"
         },
     ])
 }
