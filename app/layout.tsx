@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+import { CartNavProvider } from "./utils/CartContext";
 
 
 const ibmPlex = IBM_Plex_Mono({
@@ -24,7 +25,9 @@ export default function RootLayout({
       <body
         className={`${ibmPlex.variable} antialiased`}
       >
-        {children}
+        <CartNavProvider>
+          {children}
+        </CartNavProvider>
       </body>
     </html>
   );

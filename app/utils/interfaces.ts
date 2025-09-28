@@ -7,5 +7,5 @@ export interface ProductSchema{
 
 export interface CartItem {
     id : string,
-    quantity : string
+    quantity : number
 }

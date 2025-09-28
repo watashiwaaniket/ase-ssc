@@ -3,12 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { motion } from "motion/react";
+import { useCartNavContext } from "@/app/utils/CartContext";
 
 export default function Navbar() {
     const [viewSearchBar, setViewSearchBar] = useState(false);
+    const { cartBadge } = useCartNavContext();
 
     return(
-        <section className="flex flex-col items-center top-0 left-0 absolute sticky z-50 bg-neutral-50">
+        <section className="flex flex-col items-center top-0 left-0 sticky z-50 bg-neutral-50">
             <div className="w-screen bg-black text-neutral-300 text-center p-2 text-[10px] sm:text-base">
                 Catch our latest drop! <span className="text-neutral-50">Exclusive till 10th Oct 2025</span>
             </div>
@@ -67,9 +69,16 @@ export default function Navbar() {
                     </motion.div>
                     
                 </div>
-                <div className="flex gap-2 sm:gap-6">
-                    <Link href={'/'} className="button-hover">cart</Link>
-                    <Link href={'/'} className="button-hover">login</Link>
+                <div className="flex gap-2 sm:gap-6 relative">
+                    <Link href={'/cart'} className="button-hover">
+                        cart
+                        {cartBadge === 0 ? null : 
+                            <span className="text-[12px] absolute top-0 border rounded-2xl px-1">
+                                {cartBadge}
+                            </span>
+                        }
+                    </Link>
+                    <Link href={'#'} className="button-hover">login</Link>
                 </div>
             </div>
         </section>
