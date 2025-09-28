@@ -10,7 +10,7 @@ import Link from "next/link";
 
 
 async function fetchProducts() : Promise<ProductSchema[]> {
-  const response = await axios.get<ProductSchema[]>("http://localhost:3000/products")
+  const response = await axios.get<ProductSchema[]>("/products")
   return response.data;
 }
 
@@ -88,14 +88,14 @@ export default function page() {
     async function completeOrder(){
         
         console.log(cartItems)
-        const response = await axios.post("http://localhost:3000/products", cartItems)
+        const response = await axios.post("/products", cartItems)
         if(response.status === 201){
             console.log(response.data)
-
+            alert('Order Successful!')
             //clearing the localstorage
             localStorage.clear();
             setCartBadge(0);
-            router.push('http://localhost:3000');
+            router.push('/');
         }else{
             alert('Order did not complete');
         }

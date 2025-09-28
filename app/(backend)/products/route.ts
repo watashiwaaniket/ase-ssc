@@ -1,5 +1,4 @@
 import { CartItem, ProductSchema } from "@/app/utils/interfaces";
-import { error } from "console";
 
 const product : ProductSchema[] = [
         {
@@ -97,7 +96,7 @@ export async function POST(
         )
     } catch(error){
         return Response.json(
-            { error: 'Invalid Request' },
+            { error: error },
             { status: 400 }
         )
     }
