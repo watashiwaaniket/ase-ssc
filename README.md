@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## SortaEcommerce
+Sorta ecommerce came alive because of the ASE challenge from `VERTO`
 
-## Getting Started
+**The Task objective was to build a Simple Shopping Cart which can be accessed from [`here`](https://giddy-runner-f4c.notion.site/ASE-Challenge-278c67fdf6d48038aec8d64bef58f5a4?p=279c67fdf6d48149a9dbf54a9e3a7279&pm=s)**
 
-First, run the development server:
+## Local setup
+This is a simple `Nextjs` project which can be run in few simple steps.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+First clone the repository using the following command
+```
+git clone https://github.com/watashiwaaniket/ase-ssc.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then `cd` into the project folder and install the dependencies
+```
+cd ase-ssc/
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+After all the dependencies are fetched, run the project using this command
+```
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The project can now be accessed on
+```
+http://localhost:3000
+```
 
-## Learn More
+## How to run Test
 
-To learn more about Next.js, take a look at the following resources:
+Test cases can be run using simple command
+```
+npm test
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+It uses `Jest` and `supertest` for testing and HTTP requests
+Test file can be found in
+```
+app/(backend)/tests/route.test.ts
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## My approach and assumptions while building
+You can find my thoughtprocess and approach along with assumptions [here]()
