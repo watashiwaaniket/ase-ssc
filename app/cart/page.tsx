@@ -89,16 +89,21 @@ export default function page() {
         
         console.log(cartItems)
         const response = await axios.post("/products", cartItems)
-        if(response.status === 201){
-            console.log(response.data)
-            alert('Order Successful!')
-            //clearing the localstorage
-            localStorage.clear();
-            setCartBadge(0);
-            router.push('/');
-        }else{
-            alert('Order did not complete');
+        try{
+            if(response.status === 201){
+                console.log(response.data)
+                alert('Order Successful!')
+                //clearing the localstorage
+                localStorage.clear();
+                setCartBadge(0);
+                router.push('/');
+            }else{
+                alert('Order did not complete');
+            }
+        } catch(error){
+            console.error("CART_ERROR: ", error);
         }
+        
     }
 
     return(
